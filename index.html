@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Gemini_Generated_Image_iem1bjiem1bjiem1.png">
+    <title>Clínica Nutricional NutriVida</title>
+</head>
+<body>
+    <header>
+        <h1 class="TituloPagina">Clínica NutriVida</h1>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="contenedor-header">
+            <nav>
+                <input type="text" class="Buscador" placeholder="¿Qué estás buscando?" aria-label="Buscar">
+                <a href="#">Centro de ayuda</a>
+                <a href="#">Contactos</a>
+                <a href="#">Iniciar sesión</a>
+                <button type="button">Reservar hora</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+        <section class="seccion-titulo">
+            <h2>Conoce nuestros servicios</h2>
+            <p>Aquí encontrarás todos los servicios que trae nuestra clínica</p>
+        </section>
+
+        <section class="grid-servicios">
+            <article class="tarjeta-servicio">
+                <h3>Pérdida de peso</h3>
+                <p>Asesoría personalizada</p>
+            </article>
+
+            <article class="tarjeta-servicio">
+                <h3>Enfermedades metabólicas</h3>
+                <p>Conoce más de tu cuerpo</p>
+            </article>
+
+            <article class="tarjeta-servicio">
+                <h3>Nutrición deportiva</h3>
+                <p>Planes enfocados en el rendimiento físico</p>
+            </article>
+
+            <article class="tarjeta-servicio">
+                <h3>Alimentación vegana/vegetariana</h3>
+                <p>Planes nutricionales</p>
+            </article>
+        </section>
+
+        <section class="seccion-titulo">
+            <h2>Elige vivir bien, elige vivir sano</h2>
+        </section>
+
+        <section class="contenedor-reserva">
+            <article class="tarjeta-formulario">
+                <h2>¡Reserva ahora YA!</h2>
+                <form action="formularioReserva" method="POST">
+                    <div class="form-group">
+                        <label for="TipoAtencion">Tipo de Atención</label>
+                        <select name="TipoAtencion" id="TipoAtencion" required>
+                            <option value="" disabled selected>Tipo Atencion</option>
+                            <option value="perdida_peso">Pérdida de Peso</option>
+                            <option value="enfermedades_metabolica">Enfermedades Metabólica</option>
+                            <option value="nutricion_deportiva">Nutrición Deportiva</option>
+                            <option value="nutricion_veggie">Nutrición Veggie</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Modalidad">Modalidad</label>
+                        <select name="Modalidad" id="Modalidad" required>
+                            <option value="" disabled selected>Modalidad</option>
+                            <option value="presencial">Presencial</option>
+                            <option value="domicilio">A domicilio</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" id="fecha" name="Fecha" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="hora">Hora</label>
+                            <input type="time" id="hora" name="hora" required />
+                        </div>
+                    </div>
+
+                    <div class="botones-formulario">
+                        <button type="submit" class="btn-reservar">Reservar hora</button>
+                        <button type="reset" class="btn-anular">Anular</button>
+                    </div>
+                </form>
+            </article>
+
+            <article class="tarjeta-imagen">
+                <img src="images.jpg" alt="Imagen index">
+            </article>
+        </section>
+
+        <section class="contenedor-ubicacion">
+            <article class="tarjeta-ubicacion">
+                <h2>Nuestra ubicación</h2>
+                <p>Encuéntranos en Temuco, Región de La Araucanía</p>
+            </article>
+
+            <article class="tarjeta-ubicacion detalle-contacto">
+                <p>
+                    <strong>Dirección:</strong> Av. Alemania 0281, Temuco
+                </p>
+                <p>
+                    <strong>Horario:</strong> Lunes a sábado de 09:00 a 20:00 hrs.
+                </p>
+                <p>
+                    <strong>Teléfono:</strong> +56 9 1234 5678
+                </p>
+            </article>
+
+            <article class="tarjeta-mapa">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99600.31571278397!2d-72.68512200540458!3d-38.7290605803464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d54fd3031fb5%3A0xb4bd7a18e104cbf6!2sClinica%20RedSalud%20Mayor%20de%20Temuco%20-%20Servicios%20de%20Urgencia%2024%20horas!5e0!3m2!1ses!2scl!4v1788279109929!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer-flotante">
+        <div class="columna-footer">
+            <h4>¿Quiénes somos?</h4>
+            <p>
+                NutriVida es una clínica de nutrición y dietética fundada en 2016 en Temuco, Región de La
+                Araucanía. Está formada por 4 nutricionistas que atienden pacientes con distintos objetivos:
+                pérdida de peso, control de enfermedades metabólicas, nutrición deportiva y alimentación
+                vegetariana o vegana.
+            </p>
+        </div>
+
+        <div class="columna-footer">
+            <h4>Redes sociales</h4>
+            <ul class="redes-lista">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">X / Twitter</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-copy">
+            <p>&copy; 2026 Clínica Nutricional NutriVida. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

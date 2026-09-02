@@ -1,0 +1,197 @@
+:root {
+    --color-principal: #09994a;
+    --texto-principal: #e5e7e9;
+    --color-boton: #057035;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e5e7e9;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header {
+    background-color: var(--color-principal);
+    color: var(--texto-principal);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 10px 25px rgba(0, 68, 145, 0.3);
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TituloPagina { font-size: 1.4rem; color: var(--texto-principal); margin: 0; }
+header nav { display: flex; gap: 8px; align-items: center; }
+header nav a {
+    color: var(--texto-principal);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+header nav a:hover { background-color: rgba(255, 255, 255, 0.12); }
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.contenedor-principal {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.seccion-bienvenida {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.seccion-bienvenida h2 { margin: 0 0 6px 0; color: #1e293b; font-size: 1.6rem; }
+.seccion-bienvenida p { margin: 0; color: #64748b; }
+
+.badge-en-curso {
+    background-color: #dcfce7;
+    color: #15803d;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+/* --- GRID Y MÓDULOS DE ATENCIÓN --- */
+.grid-atencion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-modulo {
+    background: white;
+    padding: 25px;
+    border-radius: 24px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tarjeta-modulo.ancho-completo {
+    grid-column: 1 / -1;
+}
+
+.tarjeta-modulo h3 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+/* FORMULARIOS E INPUTS */
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.grupo-campo label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.grupo-campo input, 
+.grupo-campo textarea {
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 2px solid #cbd5e1;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.grupo-campo input:focus, 
+.grupo-campo textarea:focus {
+    border-color: var(--color-principal);
+}
+
+.filtro-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+/* BOTONES */
+.btn-principal {
+    background-color: var(--color-boton);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.btn-principal:hover { filter: brightness(1.1); }
+
+.btn-secundario {
+    background-color: #e2e8f0;
+    color: #334155;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.acciones-finales {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+/* --- FOOTER --- */
+.footer-flotante {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto 20px;
+    background-color: var(--color-principal);
+    color: var(--texto-principal);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.columna-footer { flex: 1 1 280px; }
+.redes-lista { list-style: none; padding: 0; }
+.redes-lista a { color: var(--texto-principal); text-decoration: none; }
+.footer-copy { width: 100%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; font-size: 0.85rem; }

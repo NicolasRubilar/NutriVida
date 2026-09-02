@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Gemini_Generated_Image_iem1bjiem1bjiem1.png">
+    <!-- Archivo CSS exclusivo para el Login -->
+    <link rel="stylesheet" href="login.css">
+    <title>Iniciar sesión - Clínica NutriVida</title>
+</head>
+<body>
+
+    <header>
+        <h1 class="TituloPagina">Clínica NutriVida</h1>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="contenedor-header">
+            <nav>
+                <input type="text" class="Buscador" placeholder="¿Qué estás buscando?" aria-label="Buscar">
+                <a href="#">Centro de ayuda</a>
+                <a href="#">Contactos</a>
+                <a href="index.html">Inicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="IniciarSesion">
+        <form id="form-login">
+            <h2>Iniciar sesión</h2>
+
+            <div class="formularioIniciarSesion">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" name="correo" id="correo" placeholder="ejemplo@dominio.com" required/>
+                <span class="error" id="error-correo"></span>
+            </div>
+
+            <div class="formularioIniciarSesion">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" name="contrasena" id="contrasena" placeholder="••••••••" required minlength="3"/>
+                <span class="error" id="error-contrasena"></span>
+            </div>
+
+            <button type="submit" >Ingresar</button>
+        </form>
+    </main>
+
+    <footer class="footer-flotante">
+        <div class="columna-footer">
+            <h4>¿Quiénes somos?</h4>
+            <p>
+                NutriVida es una clínica de nutrición y dietética fundada en 2016 en Temuco, Región de La
+                Araucanía. Está formada por 4 nutricionistas que atienden pacientes con distintos objetivos:
+                pérdida de peso, control de enfermedades metabólicas, nutrición deportiva y alimentación
+                vegetariana o vegana.
+            </p>
+        </div>
+
+        <div class="columna-footer">
+            <h4>Redes sociales</h4>
+            <ul class="redes-lista">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">X / Twitter</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-copy">
+            <p>&copy; 2026 Clínica Nutricional NutriVida. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script de validación y navegación -->
+    <script>
+        document.getElementById('form-login').addEventListener('submit', function(e) {
+            e.preventDefault(); // Detiene el envío automático del formulario
+            
+            const correoInput = document.getElementById('correo');
+            const errorCorreo = document.getElementById('error-correo');
+            const correo = correoInput.value.trim().toLowerCase();
+
+            // Limpiar mensaje de error anterior
+            errorCorreo.textContent = '';
+
+            // Validaciones según el dominio ingresado
+            if (correo.endsWith('@gmail.com')) {
+                window.location.href = 'paciente.html';
+            } else if (correo.endsWith('@secret.com')) {
+                window.location.href = 'secretaria.html';
+            } else if (correo.endsWith('@nutri.com')) {
+                window.location.href = 'nutricionista.html';
+            } else {
+                errorCorreo.textContent = 'Dominio no reconocido. Debe ser @gmail.com, @secret.com o @nutri.com';
+            }
+        });
+    </script>
+
+</body>
+</html>

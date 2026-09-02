@@ -23,8 +23,14 @@
                 <input type="text" class="Buscador" placeholder="¿Qué estás buscando?" aria-label="Buscar">
                 <a href="#">Centro de ayuda</a>
                 <a href="#">Contactos</a>
-                <a href="#">Iniciar sesión</a>
-                <button type="button">Reservar hora</button>
+                
+                <!-- 1. Enlace Iniciar Sesión en el Header -->
+                <a href="iniciarSesion.html">Iniciar sesión</a>
+
+                <!-- 2. Botón Reservar Hora en el Header -->
+                <a href="iniciarSesion.html">
+                    <button type="button">Reservar hora</button>
+                </a>
             </nav>
         </div>
     </header>
@@ -64,7 +70,9 @@
         <section class="contenedor-reserva">
             <article class="tarjeta-formulario">
                 <h2>¡Reserva ahora YA!</h2>
-                <form action="formularioReserva" method="POST">
+                
+                <!-- 3. Formulario en el Body apunta a iniciarSesion.html -->
+                <form action="iniciarSesion.html" method="GET">
                     <div class="form-group">
                         <label for="TipoAtencion">Tipo de Atención</label>
                         <select name="TipoAtencion" id="TipoAtencion" required>
@@ -97,6 +105,7 @@
                     </div>
 
                     <div class="botones-formulario">
+                        <!-- Al presionar este botón dentro del formulario enviará los datos y redirigirá a iniciarSesion.html -->
                         <button type="submit" class="btn-reservar">Reservar hora</button>
                         <button type="reset" class="btn-anular">Anular</button>
                     </div>
@@ -127,7 +136,7 @@
             </article>
 
             <article class="tarjeta-mapa">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99600.31571278397!2d-72.68512200540458!3d-38.7290605803464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d54fd3031fb5%3A0xb4bd7a18e104cbf6!2sClinica%20RedSalud%20Mayor%20de%20Temuco%20-%20Servicios%20de%20Urgencia%2024%20horas!5e0!3m2!1ses!2scl!4v1788279109929!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99600.31571278397!2d-72.68512200540458!3d-38.7290605803464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d54fd3031fb5%3A0xb4bd7a18e104cbf6!2sClinica%20RedSalud%20Mayor%20de%20Temuco%20-%20Servicios%20de%20Urgencia%2024%20horas!5e0!3m2!1ses!2scl!4v1788279109929!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </article>
         </section>
     </main>

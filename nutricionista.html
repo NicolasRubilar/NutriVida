@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <link rel="icon" type="image/png" href="Gemini_Generated_Image_iem1bjiem1bjiem1.png">
+    <link rel="stylesheet" href="nutricionista.css">
+    <title>Panel Nutricionista - Clínica NutriVida</title>
+</head>
+<body>
+    <header>
+        <h1 class="TituloPagina">Clínica NutriVida</h1>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="contenedor-header">
+            <nav>
+                <a href="#">Centro de ayuda</a>
+                <a href="#">Contactos</a>
+                <a href="iniciarSesion.html">Cerrar Sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+        <!-- Encabezado de la Consulta -->
+        <section class="seccion-bienvenida">
+            <div class="info-nutri-header">
+                <h2>Consulta Médica Activa 🩺</h2>
+                <p>Paciente en box: <strong>María González Pérez</strong> (RUT: 18.456.789-0)</p>
+            </div>
+            <span class="badge badge-en-curso">En Consulta</span>
+        </section>
+
+        <!-- Contenedor modular de evaluación y diseño -->
+        <section class="grid-atencion">
+
+            <!-- MÓDULO 1: Evaluación Inicial y Datos -->
+            <article class="tarjeta-modulo">
+                <h3>1. Evaluación del Paciente</h3>
+                <form class="form-evaluacion">
+                    <div class="grupo-campo">
+                        <label for="motivo">Motivo de Consulta / Diagnóstico</label>
+                        <input type="text" id="motivo" value="Control mensual - Control de peso y masa muscular" readonly>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="antecedentes">Antecedentes Médicos / Alergias</label>
+                        <textarea id="antecedentes" rows="3" placeholder="Registrar alergias, patologías o intolerancias...">Intolerancia leve a la lactosa. Resistencia a la insulina controlada.</textarea>
+                    </div>
+                </form>
+            </article>
+
+            <!-- MÓDULO 2: Registro de Progreso Fisico -->
+            <article class="tarjeta-modulo">
+                <h3>2. Registro de Progreso (Mediciones)</h3>
+                <form class="form-mediciones">
+                    <div class="filtro-inputs">
+                        <div class="grupo-campo">
+                            <label for="peso">Peso Actual (kg)</label>
+                            <input type="number" id="peso" step="0.1" value="74.2">
+                        </div>
+                        <div class="grupo-campo">
+                            <label for="estatura">Estatura (cm)</label>
+                            <input type="number" id="estatura" value="165">
+                        </div>
+                        <div class="grupo-campo">
+                            <label for="grasa">% Grasa Corporal</label>
+                            <input type="number" id="grasa" step="0.1" value="24.5">
+                        </div>
+                        <div class="grupo-campo">
+                            <label for="cintura">Cintura (cm)</label>
+                            <input type="number" id="cintura" value="78">
+                        </div>
+                    </div>
+                    <button type="button" class="btn-secundario">+ Guardar Mediciones</button>
+                </form>
+            </article>
+
+            <!-- MÓDULO 3: Diseño del Plan Alimenticio -->
+            <article class="tarjeta-modulo ancho-completo">
+                <h3>3. Diseño del Plan Alimenticio</h3>
+                <form class="form-pauta">
+                    <div class="filtro-inputs">
+                        <div class="grupo-campo">
+                            <label for="calorias">Objetivo Calórico (kcal/día)</label>
+                            <input type="number" id="calorias" placeholder="Ej: 1800" value="1800">
+                        </div>
+                        <div class="grupo-campo">
+                            <label for="proteinas">Proteínas (g)</label>
+                            <input type="number" id="proteinas" placeholder="Ej: 120" value="120">
+                        </div>
+                        <div class="grupo-campo">
+                            <label for="carbos">Carbohidratos (g)</label>
+                            <input type="number" id="carbos" placeholder="Ej: 180" value="180">
+                        </div>
+                        <div class="grupo-campo">
+                            <label for="grasas">Grasas Totales (g)</label>
+                            <input type="number" id="grasas" placeholder="Ej: 50" value="50">
+                        </div>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="pauta-detalle">Indicaciones y Minuta Diaria</label>
+                        <textarea id="pauta-detalle" rows="5" placeholder="Escriba aquí la pauta de comidas (Desayuno, Almuerzo, Colaciones, Cena)...">• Desayuno: 2 huevos revueltos + 1 rebanada de pan integral + té/café sin azúcar.
+• Almuerzo: 150g pechuga de pollo/pescado + 1 taza de arroz integral + ensalada verde a gusto.
+• Colación: 1 yogur alto en proteína + 10 almendras.
+• Cena: Ensalada mixta con lata de atún al agua y 1 cucharadita de aceite de oliva.</textarea>
+                    </div>
+
+                    <div class="acciones-finales">
+                        <button type="submit" class="btn-principal">Guardar y Asignar Pauta al Paciente</button>
+                    </div>
+                </form>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="footer-flotante">
+        <div class="columna-footer">
+            <h4>¿Quiénes somos?</h4>
+            <p>
+                NutriVida es una clínica de nutrición y dietética fundada en 2016 en Temuco, Región de La
+                Araucanía. Está formada por 4 nutricionistas que atienden pacientes con distintos objetivos:
+                pérdida de peso, control de enfermedades metabólicas, nutrición deportiva y alimentación
+                vegetariana o vegana.
+            </p>
+        </div>
+
+        <div class="columna-footer">
+            <h4>Redes sociales</h4>
+            <ul class="redes-lista">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">X / Twitter</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-copy">
+            <p>&copy; 2026 Clínica Nutricional NutriVida. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.form-mediciones').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Mediciones guardadas correctamente.');
+        });
+
+        document.querySelector('.btn-secundario').addEventListener('click', function () {
+            this.form.requestSubmit();
+        });
+
+        document.querySelector('.form-pauta').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Pauta guardada y asignada al paciente.');
+        });
+    </script>
+</body>
+</html>

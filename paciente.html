@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <link rel="icon" type="image/png" href="Gemini_Generated_Image_iem1bjiem1bjiem1.png">
+    <link rel="stylesheet" href="paciente.css">
+    <title>Mi Portal - Clínica NutriVida</title>
+</head>
+<body>
+    <header>
+        <h1 class="TituloPagina">Clínica NutriVida</h1>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="contenedor-header">
+            <nav>
+                <a href="#">Centro de ayuda</a>
+                <a href="#">Contactos</a>
+                <a href="iniciarSesion.html">Cerrar Sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+        <!-- Saludo Personalizado -->
+        <section class="seccion-bienvenida">
+            <h2>¡Hola, María! 👋</h2>
+            <p>Bienvenida a tu portal de salud. Revisa la información de tu tratamiento y tus próximas citas.</p>
+        </section>
+
+        <!-- Cuadrícula de secciones del paciente -->
+        <section class="grid-paciente">
+
+            <!-- Tarjeta 1: Próxima Cita Agendada -->
+            <article class="tarjeta-paciente destacado">
+                <div class="encabezado-tarjeta">
+                    <span class="badge badge-confirmado">Cita Confirmada</span>
+                    <span class="fecha-badge">15/10/2026</span>
+                </div>
+                <h3>Tu Próxima Consulta</h3>
+                <div class="info-cita">
+                    <p>🕒 <strong>Hora:</strong> 10:30 hrs</p>
+                    <p>👨‍⚕️ <strong>Nutricionista:</strong> Dr. Felipe Soto</p>
+                    <p>🥗 <strong>Especialidad:</strong> Control y Pérdida de Peso</p>
+                    <p>📍 <strong>Modalidad:</strong> Presencial (Sucursal Temuco)</p>
+                </div>
+                <div class="acciones-paciente">
+                    <button class="btn-principal">Ver Indicaciones Previas</button>
+                    <button class="btn-secundario">Solicitar Reagendamiento</button>
+                </div>
+            </article>
+
+            <!-- Tarjeta 2: Mi Plan Nutricional -->
+            <article class="tarjeta-paciente">
+                <div class="encabezado-tarjeta">
+                    <span class="badge badge-activo">Plan Activo</span>
+                </div>
+                <h3>Mi Plan Nutricional</h3>
+                <p class="descripcion-plan">Pauta personalizada asignada en tu última consulta presencial.</p>
+                
+                <div class="resumen-plan">
+                    <div class="item-resumen">
+                        <span>Calorías diarias</span>
+                        <strong>1800 kcal</strong>
+                    </div>
+                    <div class="item-resumen">
+                        <span>Meta principal</span>
+                        <strong>Déficit Calórico</strong>
+                    </div>
+                </div>
+
+                <div class="acciones-paciente">
+                    <button class="btn-principal">Descargar Pauta (PDF)</button>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3: Mi Progreso -->
+            <article class="tarjeta-paciente">
+                <div class="encabezado-tarjeta">
+                    <span class="badge badge-info">Último Control</span>
+                </div>
+                <h3>Evolución y Medidas</h3>
+                
+                <div class="estadisticas-progreso">
+                    <div class="stat-box">
+                        <span class="stat-titulo">Peso Inicial</span>
+                        <span class="stat-valor">78.5 kg</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-titulo">Peso Actual</span>
+                        <span class="stat-valor verde">74.2 kg</span>
+                    </div>
+                </div>
+
+                <div class="acciones-paciente">
+                    <button class="btn-secundario">Ver Historial Completo</button>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="footer-flotante">
+        <div class="columna-footer">
+            <h4>¿Quiénes somos?</h4>
+            <p>
+                NutriVida es una clínica de nutrición y dietética fundada en 2016 en Temuco, Región de La
+                Araucanía. Está formada por 4 nutricionistas que atienden pacientes con distintos objetivos:
+                pérdida de peso, control de enfermedades metabólicas, nutrición deportiva y alimentación
+                vegetariana o vegana.
+            </p>
+        </div>
+
+        <div class="columna-footer">
+            <h4>Redes sociales</h4>
+            <ul class="redes-lista">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">X / Twitter</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-copy">
+            <p>&copy; 2026 Clínica Nutricional NutriVida. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const accionesPaciente = document.querySelectorAll('.acciones-paciente button');
+        accionesPaciente[0].addEventListener('click', () => alert('Indicaciones previas disponibles en tu ficha.'));
+        accionesPaciente[1].addEventListener('click', () => alert('Solicitud de reagendamiento enviada.'));
+        accionesPaciente[2].addEventListener('click', () => alert('La descarga de la pauta estará disponible al conectar el sistema.'));
+        accionesPaciente[3].addEventListener('click', () => alert('Historial completo disponible al conectar el sistema.'));
+    </script>
+</body>
+</html>

@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="Gemini_Generated_Image_iem1bjiem1bjiem1.png">
-    <!-- Archivo CSS exclusivo para el Login -->
-    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/png" href="../img/Gemini_Generated_Image_iem1bjiem1bjiem1.png">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Iniciar sesión - Clínica NutriVida</title>
 </head>
 <body>
@@ -75,19 +74,16 @@
         </div>
     </footer>
 
-    <!-- Script de validación y navegación -->
     <script>
         document.getElementById('form-login').addEventListener('submit', function(e) {
-            e.preventDefault(); // Detiene el envío automático del formulario
+            e.preventDefault();
             
             const correoInput = document.getElementById('correo');
             const errorCorreo = document.getElementById('error-correo');
             const correo = correoInput.value.trim().toLowerCase();
 
-            // Limpiar mensaje de error anterior
             errorCorreo.textContent = '';
 
-            // Validaciones según el dominio ingresado
             if (correo.endsWith('@gmail.com')) {
                 window.location.href = 'paciente.html';
             } else if (correo.endsWith('@secret.com')) {

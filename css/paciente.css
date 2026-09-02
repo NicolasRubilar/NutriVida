@@ -16,7 +16,6 @@ body {
     background-size: 20px 20px;
 }
 
-/* --- HEADER Y NAVEGACIÓN --- */
 header {
     background-color: var(--color-principal);
     color: var(--texto-principal);
@@ -45,7 +44,6 @@ header nav a {
 }
 header nav a:hover { background-color: rgba(255, 255, 255, 0.12); }
 
-/* --- CONTENEDOR PRINCIPAL --- */
 .contenedor-principal {
     width: 90%;
     max-width: 1200px;
@@ -60,33 +58,18 @@ header nav a:hover { background-color: rgba(255, 255, 255, 0.12); }
     padding: 25px 30px;
     border-radius: 24px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
-.seccion-bienvenida h2 { margin: 0 0 6px 0; color: #1e293b; font-size: 1.6rem; }
+.seccion-bienvenida h2 { margin: 0 0 8px 0; color: #1e293b; font-size: 1.8rem; }
 .seccion-bienvenida p { margin: 0; color: #64748b; }
 
-.badge-en-curso {
-    background-color: #dcfce7;
-    color: #15803d;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.85rem;
-}
-
-/* --- GRID Y MÓDULOS DE ATENCIÓN --- */
-.grid-atencion {
+.grid-paciente {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 20px;
 }
 
-.tarjeta-modulo {
+.tarjeta-paciente {
     background: white;
     padding: 25px;
     border-radius: 24px;
@@ -96,66 +79,96 @@ header nav a:hover { background-color: rgba(255, 255, 255, 0.12); }
     gap: 15px;
 }
 
-.tarjeta-modulo.ancho-completo {
-    grid-column: 1 / -1;
+.tarjeta-paciente.destacado {
+    border: 2px solid var(--color-principal);
 }
 
-.tarjeta-modulo h3 {
+.encabezado-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjeta-paciente h3 {
     margin: 0;
     color: #1e293b;
-    font-size: 1.25rem;
-    border-bottom: 2px solid #f1f5f9;
-    padding-bottom: 10px;
+    font-size: 1.3rem;
 }
 
-/* FORMULARIOS E INPUTS */
-.grupo-campo {
+.info-cita p {
+    margin: 6px 0;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.descripcion-plan {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.badge {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.badge-confirmado { background-color: #dcfce7; color: #15803d; }
+.badge-activo { background-color: #e0f2fe; color: #0369a1; }
+.badge-info { background-color: #f1f5f9; color: #475569; }
+.fecha-badge { font-weight: bold; color: var(--color-principal); font-size: 0.9rem; }
+
+.resumen-plan {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    margin-bottom: 12px;
+    gap: 10px;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 16px;
 }
 
-.grupo-campo label {
+.item-resumen {
+    display: flex;
+    justify-content: space-between;
     font-size: 0.9rem;
-    font-weight: 600;
     color: #334155;
 }
 
-.grupo-campo input, 
-.grupo-campo textarea {
-    padding: 10px 14px;
-    border-radius: 12px;
-    border: 2px solid #cbd5e1;
-    font-size: 0.95rem;
-    font-family: inherit;
-    color: #1e293b;
-    outline: none;
-    transition: border-color 0.3s;
+.estadisticas-progreso {
+    display: flex;
+    gap: 15px;
 }
 
-.grupo-campo input:focus, 
-.grupo-campo textarea:focus {
-    border-color: var(--color-principal);
+.stat-box {
+    flex: 1;
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.filtro-inputs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 12px;
+.stat-titulo { font-size: 0.8rem; color: #64748b; }
+.stat-valor { font-size: 1.2rem; font-weight: bold; color: #1e293b; margin-top: 4px; }
+.stat-valor.verde { color: var(--color-principal); }
+
+.acciones-paciente {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
 }
 
-/* BOTONES */
 .btn-principal {
     background-color: var(--color-boton);
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
+    padding: 10px 16px;
+    border-radius: 20px;
     font-weight: bold;
-    font-size: 1rem;
     cursor: pointer;
-    transition: filter 0.3s;
+    transition: background-color 0.3s;
 }
 
 .btn-principal:hover { filter: brightness(1.1); }
@@ -164,20 +177,12 @@ header nav a:hover { background-color: rgba(255, 255, 255, 0.12); }
     background-color: #e2e8f0;
     color: #334155;
     border: none;
-    padding: 10px 18px;
+    padding: 10px 16px;
     border-radius: 20px;
     font-weight: 600;
     cursor: pointer;
-    width: 100%;
 }
 
-.acciones-finales {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-}
-
-/* --- FOOTER --- */
 .footer-flotante {
     width: 90%;
     max-width: 1200px;

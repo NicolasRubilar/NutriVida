@@ -18,7 +18,6 @@ body {
     background-size: 20px 20px;
 }
 
-/* --- HEADER FLOTANTE EN LOGIN --- */
 header {
     background-color: var(--color-principal);
     color: var(--texto-principal);
@@ -98,7 +97,6 @@ header nav a:hover {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* --- TARJETA DE INICIAR SESIÓN --- */
 main.IniciarSesion {
     width: 90%;
     max-width: 1200px;
@@ -182,7 +180,6 @@ main.IniciarSesion {
     transform: translateY(-2px);
 }
 
-/* --- FOOTER FLOTANTE --- */
 .footer-flotante {
     width: 90%;
     max-width: 1200px;
@@ -238,7 +235,6 @@ main.IniciarSesion {
     margin: 0;
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     header {
         top: 12px;
